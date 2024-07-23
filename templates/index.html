@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Image Upload</title>
+  <style>
+    body {
+      background-image: url('/static/images/mmmm.jpg'); /* Adjust this path */
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .file-input {
+      display: none; /* Hide the default file input */
+    }
+    .file-input-label {
+      display: block;
+      background-color: #008CBA; /* Blue */
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      display: block; /* Ensure it is block level for full-width */
+      width: 100%; /* Make the button expand to the container's width */
+      box-sizing: border-box; /* Include padding in the element's total width */
+      cursor: pointer;
+      margin-top: 20px; /* Add space between the file input and the button */
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Rubber Sheet Grader</h1>
+    <form method="post" enctype="multipart/form-data">
+      <label for="file" class="file-input-label">Choose File</label>
+          <input type="file" name="file" id="file" class="file-input">
+          <input type="submit" value="Predict" class="button">
+
+    </form>
+  </div>
+</body>
+</html>
